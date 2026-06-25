@@ -1,0 +1,20 @@
+{
+  "name": "anirem-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Anirem Camenar May - Designer gráfica",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "lint": "echo 'No linter configured'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "portfolio",
+    "design"
+  ],
+  "author": "Anirem Camenar May"
+}
