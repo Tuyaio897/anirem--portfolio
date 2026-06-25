@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Aliança Metalúrgica · Case · Anirem Camenar May</title>
+<meta name="description" content="Rebranding de uma das indústrias metalúrgicas mais tradicionais do Brasil, fundada em 1927." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Aliança Metalúrgica · Case · Anirem Camenar May" />
+<meta property="og:description" content="Tradição que precisava parecer firme e atual ao mesmo tempo." />
+<meta property="og:image" content="https://placehold.co/1200x630/FCFCFA/16161A?text=Alianca+Metalurgica" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Lato:wght@400;700&family=Mulish:wght@500;700&display=swap" />
+<link rel="stylesheet" href="_ds/anirem-portfolio-design-system-9e2340ff-8ed2-4b11-b7b3-16d3027691a2/styles.css" />
+<script src="_ds/anirem-portfolio-design-system-9e2340ff-8ed2-4b11-b7b3-16d3027691a2/_ds_bundle.js"></script>
+<style>
+  :root{
+    --paper:#FCFCFA; --ink:#16161A; --graphite:#6F6F77; --line:#E6E6E1;
+    --accent:#2E4A7E; --accent-soft:#EEF1F8; --radius:8px;
+    --font-display:"Bricolage Grotesque",system-ui,sans-serif;
+    --font-body:"Inter",system-ui,-apple-system,sans-serif;
+    --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    /* Cores da marca Aliança (manual): azul primário #0156A1, amarelo primário #FFDA00, cinza metálico #75787B, azul profundo #002F5F. Mantemos os nomes de token --al-navy / --al-gold por compatibilidade com os usos abaixo. */
+    --al-navy:#0156A1; --al-navy-deep:#002F5F; --al-gold:#FFDA00; --al-gray:#75787B;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body); font-size:1.0625rem; line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+  ::selection{background:var(--accent-soft); color:var(--ink);}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  @keyframes aniremReveal{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:none;} }
+  @supports (animation-timeline: view()){
+    [data-reveal]{ animation:aniremReveal linear both; animation-timeline:view(); animation-range:entry 0% entry 38%; }
+  }
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{ animation:none !important; opacity:1 !important; transform:none !important; } }
+  @media (max-width:960px){ :root{ --case-cols:1fr; --sys-cols:1fr; --apps-pair:1fr; --apps-grid:repeat(2,1fr); --type-cols:1fr; --color-cols:repeat(2,1fr); --facts-cols:repeat(2,1fr); } }
+</style>
+</helmet>
+
+<div style="background:var(--paper); color:var(--ink); font-family:var(--font-body);">
+
+  <a href="#capa" style="position:absolute; left:-9999px; top:8px; z-index:200; background:var(--ink); color:var(--paper); padding:10px 16px; border-radius:6px; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none;" style-focus="left:16px;">Pular para o conteúdo</a>
+
+  <header style="position:sticky; top:0; z-index:100; border:0; background:linear-gradient(to bottom, rgba(252,252,250,.92) 0%, rgba(252,252,250,.78) 45%, rgba(252,252,250,.30) 80%, rgba(252,252,250,0) 100%); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%); mask-image:linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);">
+    <div aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.05; background-image:url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22160%22%20height=%22160%22%3E%3Cfilter%20id=%22n%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.85%22%20numOctaves=%222%22%20stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20filter=%22url(%23n)%22/%3E%3C/svg%3E'); background-size:160px 160px;"></div>
+    <nav style="position:relative; max-width:1600px; margin:0 auto; padding:18px clamp(24px,5vw,80px) 26px; display:flex; align-items:center; justify-content:space-between; gap:24px; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase;">
+      <a href="Anirem Camenar May.dc.html#work" style="color:var(--ink); text-decoration:none;" style-hover="color:var(--accent);">← Trabalhos</a>
+      <a href="Anirem Camenar May.dc.html" style="color:var(--graphite); text-decoration:none;" style-hover="color:var(--accent);">Anirem Camenar May</a>
+    </nav>
+  </header>
+
+  <main id="capa" style="max-width:1600px; margin:0 auto; padding:0 clamp(24px,5vw,80px);">
+
+    <!-- 1. CAPA — institucional. Key visual "Confiança, é Aliança" sobre o monograma. -->
+    <section style="padding:clamp(40px,6vw,72px) 0 clamp(40px,5vw,56px);">
+      <p style="margin:0; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">MARCA · 2026</p>
+      <h1 style="margin:14px 0 0; font-family:var(--font-display); font-weight:700; font-size:clamp(2.6rem,7vw,5rem); line-height:1.02; letter-spacing:-.035em; color:var(--ink); max-width:14ch;">Aliança Metalúrgica</h1>
+      <p style="margin:24px 0 0; max-width:50ch; font-size:clamp(1.0625rem,1.7vw,1.3125rem); line-height:1.5; color:var(--graphite);">Rebranding de uma das indústrias metalúrgicas mais tradicionais do Brasil, fundada em 1927.</p>
+    </section>
+
+    <figure data-reveal style="margin:0;">
+      <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+        <img src="uploads/m.i.v_alianaa_v01_202629-s29abvR3FOkk72I3.png" alt="Key visual da campanha 'Confiança, é Aliança!' com maçaneta e fechadura cromadas sobre o monograma azul." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+      </div>
+      <figcaption style="margin-top:14px; text-align:center; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Key visual da campanha sobre o monograma.</figcaption>
+    </figure>
+
+    <!-- FACTS STRIP -->
+    <section data-reveal style="padding:clamp(40px,5vw,64px) 0 0;">
+      <div style="display:grid; grid-template-columns:var(--facts-cols,repeat(4,1fr)); gap:clamp(20px,3vw,40px); padding:clamp(20px,2.4vw,28px) 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+        <div>
+          <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Cliente</p>
+          <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1rem,1.3vw,1.125rem); line-height:1.25; letter-spacing:-.01em; color:var(--ink);">Aliança Metalúrgica</p>
+        </div>
+        <div>
+          <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Setor</p>
+          <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1rem,1.3vw,1.125rem); line-height:1.25; letter-spacing:-.01em; color:var(--ink);">Indústria · ferragens e gás</p>
+        </div>
+        <div>
+          <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Entregas</p>
+          <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1rem,1.3vw,1.125rem); line-height:1.25; letter-spacing:-.01em; color:var(--ink);">Marca, sistema, papelaria, EPI, campanha</p>
+        </div>
+        <div>
+          <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Ano</p>
+          <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1rem,1.3vw,1.125rem); line-height:1.25; letter-spacing:-.01em; color:var(--ink);">2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTEXTO -->
+    <section data-reveal style="padding:clamp(80px,12vw,140px) 0 0;">
+      <div>
+        <p style="margin:0 0 14px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Contexto</p>
+        <p style="margin:0; font-size:clamp(1.0625rem,1.5vw,1.1875rem); line-height:1.65; color:var(--ink);">Fundada em São Paulo em 1927, a Aliança Metalúrgica é uma das empresas mais tradicionais do setor no Brasil, líder em reguladores de gás e uma das três maiores em fechaduras e ferragens, com quase cem anos de história e cerca de 700 colaboradores. O desafio do rebranding era atualizar uma marca centenária sem perder a autoridade que o tempo construiu. Ela precisava parecer firme e confiável, valores que estão no coração do negócio, e ao mesmo tempo contemporânea o suficiente pra falar com o mercado de hoje. Criei a identidade inteira do zero, da marca às aplicações.</p>
+      </div>
+    </section>
+
+    <!-- 3. CONCEITO — monograma triangular sobre grid de construção -->
+    <section data-reveal style="padding:clamp(80px,12vw,140px) 0 0;">
+      <div style="display:grid; grid-template-columns:var(--case-cols,minmax(0,4fr) minmax(0,8fr)); gap:clamp(32px,5vw,72px); align-items:start;">
+        <div>
+          <p style="margin:0 0 14px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Conceito</p>
+          <p style="margin:0; font-size:clamp(1.0625rem,1.5vw,1.1875rem); line-height:1.65; color:var(--ink);">O nome diz tudo: aliança é união, e união se constrói com elos. Desenhei o símbolo como um triângulo formado por três elos entrelaçados, que remetem à força de uma corrente e à ideia de parceria que sustenta a marca há quase um século. A forma é estável por natureza, um triângulo é a estrutura mais firme que existe, e isso conversa direto com o que a empresa vende: segurança. Em volta do símbolo, construí um sistema sóbrio e confiável, ancorado no azul institucional e num dourado que aparece só nos momentos certos. A assinatura "Confiança, é Aliança" amarra tudo.</p>
+        </div>
+        <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+          <img src="uploads/m.i.v_alianaa_v01_202643-tDBgdRL2tp9zqHYX.png" alt="Construção do logo Aliança Desde 1927 sobre grid geométrico, com linhas-guia visíveis." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. O SISTEMA — 3 sub-blocos zigue-zague -->
+    <section style="padding:clamp(80px,12vw,140px) 0 0;">
+      <p data-reveal style="margin:0 0 clamp(32px,5vw,56px); font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">O sistema</p>
+      <p data-reveal style="margin:0 0 clamp(48px,7vw,80px); max-width:60ch; font-family:var(--font-display); font-weight:600; font-size:clamp(1.375rem,2.4vw,1.875rem); line-height:1.25; letter-spacing:-.015em; color:var(--ink); text-wrap:balance;">Montei a identidade como um sistema completo e resistente, feito pra aguentar de papelaria a EPI, de Instagram a outdoor, sem perder a autoridade.</p>
+
+      <!-- Símbolo e assinatura · imagem à direita -->
+      <div data-reveal style="display:grid; grid-template-columns:var(--sys-cols,minmax(0,5fr) minmax(0,7fr)); gap:clamp(32px,5vw,72px); align-items:center; margin-bottom:clamp(72px,10vw,112px);">
+        <div>
+          <p style="margin:0 0 12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Símbolo e assinatura</p>
+          <p style="margin:0; max-width:42ch; font-size:1.0625rem; line-height:1.65; color:var(--ink);">O monograma triangular de elos, a versão com "Desde 1927" e a assinatura "Confiança, é Aliança", em azul e em dourado.</p>
+        </div>
+        <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden; background:var(--paper); display:flex; align-items:center; justify-content:center; padding:clamp(24px,4vw,56px);">
+          <img src="uploads/Ativo 4@3x.png" alt="Assinatura completa da Aliança Metalúrgica em versão positiva e negativa." loading="lazy" style="max-width:90%; max-height:100%; width:auto; height:auto; display:block; image-rendering:high-quality;" />
+        </div>
+      </div>
+
+      <!-- Cor e tipografia — bloco unificado, layout editorial em prancha -->
+      <div data-reveal>
+        <p style="margin:0 0 clamp(28px,4vw,40px); font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Cor e tipografia</p>
+
+        <!-- Tipografia em par: as duas famílias lado a lado em grande escala -->
+        <div style="display:grid; grid-template-columns:var(--type-cols,1fr 1fr); gap:clamp(28px,4vw,56px); align-items:end; padding-bottom:clamp(40px,5vw,64px); border-bottom:1px solid var(--line); margin-bottom:clamp(40px,5vw,64px);">
+          <div>
+            <p style="margin:0 0 16px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:var(--graphite);">Principal · geométrica humanista</p>
+            <p style="margin:0; font-family:'Mulish',var(--font-display); font-weight:700; font-size:clamp(2.8rem,6.4vw,5rem); line-height:.95; letter-spacing:-.02em; color:var(--ink);">Proxima Nova</p>
+            <p style="margin:18px 0 0; max-width:36ch; font-size:1rem; line-height:1.55; color:var(--graphite);">Tipografia que combina precisão geométrica com sutis características humanistas.</p>
+          </div>
+          <div>
+            <p style="margin:0 0 16px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:var(--graphite);">Secundária · flexível</p>
+            <p style="margin:0; font-family:'Lato','Helvetica Neue',sans-serif; font-weight:700; font-size:clamp(2.2rem,5vw,3.8rem); line-height:.95; letter-spacing:-.01em; color:var(--ink);">Lato</p>
+            <p style="margin:18px 0 0; max-width:36ch; font-size:1rem; line-height:1.55; color:var(--graphite);">Complementa a principal e garante flexibilidade em diferentes contextos.</p>
+          </div>
+        </div>
+
+        <!-- Paleta: faixa horizontal de 4 cores, museu-card. Cada coluna mostra Pantone + hex. -->
+        <div style="display:grid; grid-template-columns:var(--color-cols,repeat(4,1fr)); border-radius:var(--radius); overflow:hidden;">
+          <div style="aspect-ratio:3/4; background:#0156A1; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(20px,2.4vw,28px); color:#fff;">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.65);">Primária</p>
+            <div>
+              <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:clamp(1.125rem,1.6vw,1.4rem); letter-spacing:-.01em; color:#fff;">Azul Primário</p>
+              <p style="margin:10px 0 2px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(255,255,255,.78);">Pantone 3015 C</p>
+              <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(255,255,255,.78);">#0156A1</p>
+            </div>
+          </div>
+          <div style="aspect-ratio:3/4; background:#FFDA00; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(20px,2.4vw,28px); color:#0E2542;">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(14,37,66,.55);">Primária</p>
+            <div>
+              <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:clamp(1.125rem,1.6vw,1.4rem); letter-spacing:-.01em; color:#0E2542;">Amarelo Primário</p>
+              <p style="margin:10px 0 2px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(14,37,66,.7);">Pantone 109 C</p>
+              <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(14,37,66,.7);">#FFDA00</p>
+            </div>
+          </div>
+          <div style="aspect-ratio:3/4; background:#75787B; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(20px,2.4vw,28px); color:#fff;">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.7);">Secundária</p>
+            <div>
+              <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:clamp(1.125rem,1.6vw,1.4rem); letter-spacing:-.01em; color:#fff;">Cinza Metálico</p>
+              <p style="margin:10px 0 2px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(255,255,255,.78);">Pantone Cool Gray 9 C</p>
+              <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(255,255,255,.78);">#75787B</p>
+            </div>
+          </div>
+          <div style="aspect-ratio:3/4; background:#002F5F; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(20px,2.4vw,28px); color:#fff;">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.6);">Secundária</p>
+            <div>
+              <p style="margin:0; font-family:var(--font-display); font-weight:700; font-size:clamp(1.125rem,1.6vw,1.4rem); letter-spacing:-.01em; color:#fff;">Azul Profundo</p>
+              <p style="margin:10px 0 2px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(255,255,255,.72);">Pantone 295 C</p>
+              <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(255,255,255,.72);">#002F5F</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CESURA TIPOGRÁFICA -->
+    <section data-reveal style="margin-top:clamp(80px,12vw,140px);">
+      <div style="position:relative; border-radius:var(--radius); background:#0156A1; padding:clamp(64px,10vw,140px) clamp(40px,7vw,96px); overflow:hidden;">
+        <p style="margin:0 0 18px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.7);">Aplicações</p>
+        <p style="margin:0; max-width:20ch; font-family:var(--font-display); font-weight:700; font-size:clamp(2.4rem,6vw,4.5rem); line-height:1; letter-spacing:-.025em; color:#fff;">Levei o sistema por toda a empresa.</p>
+        <p style="margin:24px 0 0; max-width:48ch; font-size:clamp(1rem,1.4vw,1.125rem); line-height:1.55; color:rgba(255,255,255,.82);">Do escritório ao chão de fábrica, da prateleira ao feed.</p>
+      </div>
+    </section>
+
+    <!-- 6. APLICAÇÕES -->
+    <section style="padding:clamp(40px,5vw,64px) 0 0;">
+
+      <!-- Largura total: papelaria azul -->
+      <figure data-reveal style="margin:0 0 clamp(32px,4vw,48px);">
+        <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+          <img src="uploads/m.i.v_alianaa_v01_202645-73hVpY3mfYVAXI56.png" alt="Conjunto institucional de papelaria: caderno, pasta, papel timbrado e cartão." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+        <figcaption style="margin-top:12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Caderno, pasta, timbrado, cartão.</figcaption>
+      </figure>
+
+      <!-- Par campanha + outdoor -->
+      <div style="display:grid; grid-template-columns:var(--apps-pair,1fr 1fr); gap:clamp(20px,3vw,32px); margin-bottom:clamp(32px,4vw,48px);">
+        <figure data-reveal style="margin:0;">
+          <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+            <img src="uploads/m.i.v_alianaa_v01_202647-CXITNKiKaQ5rr0Kl.png" alt="Campanha institucional: 'Uma história feita para proteger gerações' com maçaneta cromada sobre fundo azul." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <figcaption style="margin-top:12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Campanha institucional.</figcaption>
+        </figure>
+        <figure data-reveal style="margin:0;">
+          <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+            <img src="uploads/m.i.v_alianaa_v01_202646-MJqJbgXYAi8KrjAp.png" alt="Outdoor de campanha: 'Quando a confiança importa, a decisão é técnica'." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <figcaption style="margin-top:12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Outdoor de campanha.</figcaption>
+        </figure>
+      </div>
+
+      <!-- Grade brindes e uniforme -->
+      <div data-reveal style="display:grid; grid-template-columns:var(--apps-grid,repeat(3,1fr)); gap:clamp(16px,2vw,24px); margin-bottom:clamp(32px,4vw,48px);">
+        <figure style="margin:0;">
+          <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+            <img src="uploads/m.i.v_alianaa_v01_202634-FPGsMblbvXWEH3gh.webp" alt="Garrafa metálica institucional da Aliança." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <figcaption style="margin-top:10px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Garrafa</figcaption>
+        </figure>
+        <figure style="margin:0;">
+          <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+            <img src="uploads/m.i.v_alianaa_v01_202631-iDkOiKJ7qhbcSc4u.png" alt="Camisa polo da Aliança, frente e costas, com o monograma e grafismo de fundo." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <figcaption style="margin-top:10px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Polo</figcaption>
+        </figure>
+        <figure style="margin:0;">
+          <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+            <img src="uploads/m.i.v_alianaa_v01_202633-2ZNhjzE1Lnyol287.png" alt="Capacete de obra da Aliança com o grafismo do monograma." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <figcaption style="margin-top:10px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Capacete</figcaption>
+        </figure>
+        <figure style="margin:0;">
+          <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+            <img src="uploads/pasted-1782251237041-0.png" alt="Caneta esferográfica e lapiseira azuis com a assinatura 'Confiança é Aliança!'." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <figcaption style="margin-top:10px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Caneta e lapiseira</figcaption>
+        </figure>
+        <figure style="margin:0;">
+          <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+            <img src="uploads/pasted-1782251245678-0.png" alt="Cartões de visita azuis com o monograma da Aliança em branco e amarelo, frente e verso." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <figcaption style="margin-top:10px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Cartão de visita</figcaption>
+        </figure>
+        <figure style="margin:0;">
+          <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+            <img src="uploads/pasted-1782251261312-0.png" alt="Site institucional em notebook: 'Há decisões que cuidam das pessoas mesmo em silêncio'." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+          <figcaption style="margin-top:10px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Newsletter no site</figcaption>
+        </figure>
+      </div>
+
+      <!-- Largura total: banner de fachada -->
+      <figure data-reveal style="margin:0;">
+        <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+          <img src="uploads/m.i.v_alianaa_v01_202630-ozYt9pakIqQ70CMj.png" alt="Banner de fachada da Aliança." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+        <figcaption style="margin-top:12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Banner de fachada da campanha.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 6. FECHO -->
+    <section data-reveal style="padding:clamp(80px,12vw,140px) 0 0;">
+      <div style="position:relative; aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden;">
+        <img src="uploads/m.i.v_alianaa_v01_202642-POMjvr1MOhATRjlh.png" alt="Imagem de fecho da campanha Aliança Metalúrgica." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+      </div>
+      <p style="margin:clamp(36px,5vw,56px) 0 0; max-width:38ch; font-family:var(--font-display); font-weight:700; font-size:clamp(1.875rem,4vw,3rem); line-height:1.1; letter-spacing:-.025em; color:var(--ink); text-wrap:balance;">Quase cem anos de história em uma marca que parece tão firme quanto os produtos que ela faz.</p>
+      <p style="margin:18px 0 0; max-width:58ch; font-size:1.0625rem; line-height:1.6; color:var(--graphite);">Do elo do símbolo ao capacete na obra, tudo repete a mesma promessa: confiança, é Aliança.</p>
+    </section>
+
+    <section style="margin-top:clamp(80px,12vw,140px); padding:clamp(40px,6vw,64px) 0; border-top:1px solid var(--line); display:flex; align-items:baseline; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <p style="margin:0; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Próximo case</p>
+      <a href="Case Unica Viagens.dc.html" style="text-decoration:none; color:var(--ink); display:inline-flex; align-items:baseline; gap:14px;" style-hover="color:var(--accent);">
+        <span style="font-family:var(--font-display); font-weight:600; font-size:clamp(1.5rem,3.2vw,2.4rem); letter-spacing:-.02em; line-height:1.05;">Única Viagens e Turismo →</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer style="margin-top:clamp(48px,6vw,72px); background:var(--ink); color:var(--paper);">
+    <div style="max-width:1600px; margin:0 auto; padding:28px clamp(24px,5vw,80px); display:flex; align-items:center; flex-wrap:wrap; gap:20px; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase;">
+      <a href="mailto:anirem.studio@gmail.com" style="color:var(--paper); text-decoration:none;" style-hover="color:#A9C2F0;">anirem.studio@gmail.com</a>
+      <a href="#capa" style="color:var(--paper); text-decoration:none; margin-left:auto;" style-hover="color:#A9C2F0;">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Castello del Camenar · Case · Anirem Camenar May</title>
+<meta name="description" content="Projeto autoral de uma linha de três rótulos de vinho inspirada em passagens bíblicas." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Castello del Camenar · Case · Anirem Camenar May" />
+<meta property="og:description" content="Graça, Milagre e Redenção. Uma linha de rótulos que traduz passagens bíblicas em ilustração." />
+<meta property="og:image" content="https://placehold.co/1200x630/FCFCFA/16161A?text=Castello+del+Camenar" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" />
+<link rel="stylesheet" href="_ds/anirem-portfolio-design-system-9e2340ff-8ed2-4b11-b7b3-16d3027691a2/styles.css" />
+<script src="_ds/anirem-portfolio-design-system-9e2340ff-8ed2-4b11-b7b3-16d3027691a2/_ds_bundle.js"></script>
+<style>
+  :root{
+    --paper:#FCFCFA; --ink:#16161A; --graphite:#6F6F77; --line:#E6E6E1;
+    --accent:#2E4A7E; --accent-soft:#EEF1F8; --radius:8px;
+    --font-display:"Bricolage Grotesque",system-ui,sans-serif;
+    --font-body:"Inter",system-ui,-apple-system,sans-serif;
+    --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --font-serif:"Cormorant Garamond",Georgia,serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body); font-size:1.0625rem; line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+  ::selection{background:var(--accent-soft); color:var(--ink);}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  @keyframes aniremReveal{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:none;} }
+  @supports (animation-timeline: view()){
+    [data-reveal]{ animation:aniremReveal linear both; animation-timeline:view(); animation-range:entry 0% entry 38%; }
+  }
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{ animation:none !important; opacity:1 !important; transform:none !important; } }
+  @media (max-width:960px){ :root{ --case-cols:1fr; --sys-cols:1fr; --apps-pair:1fr; --tri:1fr; --cover-cols:1fr; --wine-cols:1fr; --facts-cols:repeat(2,1fr); } }
+</style>
+</helmet>
+
+<div style="background:var(--paper); color:var(--ink); font-family:var(--font-body);">
+
+  <a href="#capa" style="position:absolute; left:-9999px; top:8px; z-index:200; background:var(--ink); color:var(--paper); padding:10px 16px; border-radius:6px; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none;" style-focus="left:16px;">Pular para o conteúdo</a>
+
+  <header style="position:sticky; top:0; z-index:100; border:0; background:linear-gradient(to bottom, rgba(252,252,250,.92) 0%, rgba(252,252,250,.78) 45%, rgba(252,252,250,.30) 80%, rgba(252,252,250,0) 100%); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%); mask-image:linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);">
+    <div aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.05; background-image:url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22160%22%20height=%22160%22%3E%3Cfilter%20id=%22n%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%220.85%22%20numOctaves=%222%22%20stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20filter=%22url(%23n)%22/%3E%3C/svg%3E'); background-size:160px 160px;"></div>
+    <nav style="position:relative; max-width:1600px; margin:0 auto; padding:18px clamp(24px,5vw,80px) 26px; display:flex; align-items:center; justify-content:space-between; gap:24px; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase;">
+      <a href="Anirem Camenar May.dc.html#work" style="color:var(--ink); text-decoration:none;" style-hover="color:var(--accent);">← Trabalhos</a>
+      <a href="Anirem Camenar May.dc.html" style="color:var(--graphite); text-decoration:none;" style-hover="color:var(--accent);">Anirem Camenar May</a>
+    </nav>
+  </header>
+
+  <main id="capa" style="max-width:1600px; margin:0 auto; padding:0 clamp(24px,5vw,80px);">
+
+    <!-- 1. CAPA — título + linha biográfica à esquerda; foto das 3 garrafas à direita -->
+    <section style="padding:clamp(40px,6vw,72px) 0 0;">
+      <div style="display:grid; grid-template-columns:var(--cover-cols,minmax(0,5fr) minmax(0,7fr)); gap:clamp(32px,4vw,56px); align-items:center;">
+        <div>
+          <p style="margin:0; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">EMBALAGEM</p>
+          <h1 style="margin:18px 0 0; font-family:var(--font-display); font-weight:700; font-size:clamp(2.6rem,6vw,4.4rem); line-height:1; letter-spacing:-.035em; color:var(--ink); max-width:14ch;">Castello del Camenar</h1>
+          <p style="margin:24px 0 0; max-width:42ch; font-size:clamp(.9375rem,1.25vw,1.0625rem); line-height:1.6; color:var(--ink);">Projeto autoral de embalagem. Quis criar uma linha de vinhos a partir de um recorte específico, histórias e sensações da Bíblia que mencionam o vinho. O desafio era fazer cada rótulo evocar claramente sua passagem e a espiritualidade por trás dela, sem cair no clichê religioso nem no peso litúrgico. Três vinhos, três trechos, um sistema que precisa parecer uma família.</p>
+        </div>
+        <figure data-reveal style="margin:0;">
+          <div style="position:relative; aspect-ratio:3/2; border-radius:var(--radius); overflow:hidden;">
+            <img src="uploads/mockup vinhos.png" alt="Três garrafas da linha Castello del Camenar lado a lado: Graça, Milagre e Redenção." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FACTS STRIP -->
+    <section data-reveal style="padding:clamp(40px,5vw,64px) 0 0;">
+      <div style="display:grid; grid-template-columns:var(--facts-cols,repeat(4,1fr)); gap:clamp(20px,3vw,40px); padding:clamp(20px,2.4vw,28px) 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+        <div>
+          <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Cliente</p>
+          <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1rem,1.3vw,1.125rem); line-height:1.25; letter-spacing:-.01em; color:var(--ink);">Projeto autoral</p>
+        </div>
+        <div>
+          <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Setor</p>
+          <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1rem,1.3vw,1.125rem); line-height:1.25; letter-spacing:-.01em; color:var(--ink);">Embalagem · vinho</p>
+        </div>
+        <div>
+          <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Entregas</p>
+          <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1rem,1.3vw,1.125rem); line-height:1.25; letter-spacing:-.01em; color:var(--ink);">Marca, ilustração, rótulos</p>
+        </div>
+        <div>
+          <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Ano</p>
+          <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1rem,1.3vw,1.125rem); line-height:1.25; letter-spacing:-.01em; color:var(--ink);">2024</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONCEITO — tríptico de cartões: cada vinho com ilustração, versículo bíblico e copy -->
+    <section data-reveal style="padding:clamp(72px,10vw,120px) 0 0;">
+      <p style="margin:0 0 14px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Conceito</p>
+      <p style="margin:0 0 clamp(40px,6vw,64px); max-width:62ch; font-size:clamp(1.0625rem,1.5vw,1.1875rem); line-height:1.65; color:var(--ink);">Parti de três passagens e deixei a própria cor do vinho conduzir cada narrativa. Em vez de ilustrar a cena de forma literal, traduzi cada história numa composição botânica própria, com as frutas, flores e folhas que carregam o clima de cada passagem. A cor do vinho deixou de ser um detalhe técnico e virou o primeiro narrador do rótulo.</p>
+
+      <!-- Tríptico -->
+      <div style="display:grid; grid-template-columns:var(--tri,1fr 1fr 1fr); gap:clamp(16px,2vw,24px);">
+
+        <!-- GRAÇA · branco -->
+        <article style="border-radius:var(--radius); overflow:hidden; background:#F4E9C2; display:flex; flex-direction:column;">
+          <div style="aspect-ratio:1; padding:clamp(24px,3vw,40px); display:flex; align-items:center; justify-content:center;">
+            <img src="uploads/Ilustração vinho branco.png" alt="Composição botânica do Graça: limões, flores brancas e folhagem solar." loading="lazy" style="max-width:100%; max-height:100%; width:auto; height:auto; display:block;" />
+          </div>
+          <div style="padding:clamp(24px,3vw,32px) clamp(28px,3.4vw,40px) clamp(32px,4vw,44px); border-top:1px solid rgba(22,22,26,.08);">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(22,22,26,.6);">Branco · Salmo 104:14-15</p>
+            <h3 style="margin:10px 0 0; font-family:var(--font-display); font-weight:700; font-size:clamp(1.75rem,3vw,2.4rem); line-height:1; letter-spacing:-.02em; color:#16161A;">Graça</h3>
+            <blockquote style="margin:18px 0 0; padding-left:16px; border-left:2px solid rgba(22,22,26,.22); font-family:var(--font-serif); font-style:italic; font-weight:500; font-size:clamp(.9375rem,1.15vw,1.0625rem); line-height:1.55; color:rgba(22,22,26,.82);">"Faz crescer a erva para os animais, e as plantas para o uso do homem, de modo que da terra tire o alimento, e o vinho que alegra o coração do homem, o azeite que lhe faz reluzir o rosto e o pão que fortalece o seu coração."</blockquote>
+            <p style="margin:18px 0 0; font-size:.9375rem; line-height:1.55; color:rgba(22,22,26,.78);">O vinho que alegra o coração do homem. Cítricos, flor de jasmim e folhagem solar.</p>
+          </div>
+        </article>
+
+        <!-- MILAGRE · rosé -->
+        <article style="border-radius:var(--radius); overflow:hidden; background:#F0C7B8; display:flex; flex-direction:column;">
+          <div style="aspect-ratio:1; padding:clamp(24px,3vw,40px); display:flex; align-items:center; justify-content:center;">
+            <img src="uploads/iliustração png rose.png" alt="Composição botânica do Milagre: papaia, hibiscos coral e folhas tropicais." loading="lazy" style="max-width:100%; max-height:100%; width:auto; height:auto; display:block;" />
+          </div>
+          <div style="padding:clamp(24px,3vw,32px) clamp(28px,3.4vw,40px) clamp(32px,4vw,44px); border-top:1px solid rgba(22,22,26,.08);">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(22,22,26,.6);">Rosé · João 2:1-11</p>
+            <h3 style="margin:10px 0 0; font-family:var(--font-display); font-weight:700; font-size:clamp(1.75rem,3vw,2.4rem); line-height:1; letter-spacing:-.02em; color:#16161A;">Milagre</h3>
+            <blockquote style="margin:18px 0 0; padding-left:16px; border-left:2px solid rgba(22,22,26,.22); font-family:var(--font-serif); font-style:italic; font-weight:500; font-size:clamp(.9375rem,1.15vw,1.0625rem); line-height:1.55; color:rgba(22,22,26,.82);">"Disse-lhes Jesus: enchei de água essas talhas. E encheram-nas até em cima. Tirai agora, disse-lhes ele, e levai ao mestre-sala. Quando o mestre-sala provou a água tornada em vinho, chamou o noivo e disse: todo homem põe primeiro o vinho bom; mas tu guardaste até agora o melhor vinho."</blockquote>
+            <p style="margin:18px 0 0; font-size:.9375rem; line-height:1.55; color:rgba(22,22,26,.78);">As bodas de Caná. Papaia, hibisco e flores brancas em paleta coral.</p>
+          </div>
+        </article>
+
+        <!-- REDENÇÃO · tinto -->
+        <article style="border-radius:var(--radius); overflow:hidden; background:#1A0E10; display:flex; flex-direction:column; color:#F0E8D6;">
+          <div style="aspect-ratio:1; padding:clamp(24px,3vw,40px); display:flex; align-items:center; justify-content:center;">
+            <img src="uploads/tinto png.png" alt="Composição botânica da Redenção: coroa de espinhos e rosas vermelhas." loading="lazy" style="max-width:100%; max-height:100%; width:auto; height:auto; display:block;" />
+          </div>
+          <div style="padding:clamp(24px,3vw,32px) clamp(28px,3.4vw,40px) clamp(32px,4vw,44px); border-top:1px solid rgba(240,232,214,.12);">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,214,.6);">Tinto · Mateus 26:26-29</p>
+            <h3 style="margin:10px 0 0; font-family:var(--font-display); font-weight:700; font-size:clamp(1.75rem,3vw,2.4rem); line-height:1; letter-spacing:-.02em; color:#F0E8D6;">Redenção</h3>
+            <blockquote style="margin:18px 0 0; padding-left:16px; border-left:2px solid rgba(240,232,214,.25); font-family:var(--font-serif); font-style:italic; font-weight:500; font-size:clamp(.9375rem,1.15vw,1.0625rem); line-height:1.55; color:rgba(240,232,214,.88);">"Enquanto comiam, Jesus tomou um pão, deu graças, partiu-o e o deu aos seus discípulos, dizendo: tomai, comei; isto é o meu corpo. E tomando um cálice e tendo dado graças, deu-lho, dizendo: bebei dele todos; porque isto é o meu sangue, o sangue da nova aliança, derramado em favor de muitos."</blockquote>
+            <p style="margin:18px 0 0; font-size:.9375rem; line-height:1.55; color:rgba(240,232,214,.78);">A Última Ceia. Coroa de espinhos e rosas vermelhas, onde o tinto remete ao sangue.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+        <!-- 4. O SISTEMA — arquitetura, tipografia e cor unificadas -->
+    <section style="padding:clamp(72px,10vw,120px) 0 0;">
+      <p data-reveal style="margin:0 0 18px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">O sistema</p>
+      <p data-reveal style="margin:0 0 clamp(40px,6vw,64px); max-width:60ch; font-family:var(--font-display); font-weight:600; font-size:clamp(1.375rem,2.4vw,1.75rem); line-height:1.25; letter-spacing:-.015em; color:var(--ink); text-wrap:balance;">O fio condutor é a ilustração. Construí o sistema pra que os três rótulos fossem inconfundivelmente da mesma linha.</p>
+
+      <!-- Arquitetura do rótulo: três rótulos planos lado a lado, mesma diagramação -->
+      <div data-reveal style="margin-bottom:clamp(56px,8vw,88px);">
+        <p style="margin:0 0 18px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Arquitetura do rótulo</p>
+        <p style="margin:0 0 clamp(28px,4vw,40px); max-width:54ch; font-size:1.0625rem; line-height:1.65; color:var(--ink);">Mesma diagramação centralizada nos três: nome do vinho em destaque, tipo de vinho e a assinatura Castello del Camenar embaixo.</p>
+        <div style="display:grid; grid-template-columns:var(--tri,1fr 1fr 1fr); gap:clamp(16px,2vw,24px);">
+          <figure style="margin:0;">
+            <div style="position:relative; aspect-ratio:5/6; border-radius:var(--radius); overflow:hidden;">
+              <img src="uploads/rotulos_Prancheta 1.jpg" alt="Rótulo plano do Graça, vinho fino branco." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+            </div>
+            <figcaption style="margin-top:10px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Graça · Branco</figcaption>
+          </figure>
+          <figure style="margin:0;">
+            <div style="position:relative; aspect-ratio:5/6; border-radius:var(--radius); overflow:hidden;">
+              <img src="uploads/rotulos-02.jpg" alt="Rótulo plano do Milagre, vinho fino rosé." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+            </div>
+            <figcaption style="margin-top:10px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Milagre · Rosé</figcaption>
+          </figure>
+          <figure style="margin:0;">
+            <div style="position:relative; aspect-ratio:5/6; border-radius:var(--radius); overflow:hidden;">
+              <img src="uploads/rotulos-03.jpg" alt="Rótulo plano da Redenção, vinho fino tinto." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+            </div>
+            <figcaption style="margin-top:10px; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Redenção · Tinto</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Tipografia + Cor lado a lado, sem moldura -->
+      <div data-reveal style="display:grid; grid-template-columns:var(--sys-cols,minmax(0,5fr) minmax(0,7fr)); gap:clamp(32px,5vw,72px); align-items:center;">
+        <div>
+          <p style="margin:0 0 12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Tipografia</p>
+          <p style="margin:0 0 28px; max-width:42ch; font-size:1.0625rem; line-height:1.65; color:var(--ink);">Um lettering próprio nos nomes dos vinhos, em caixa-baixa e itálico, com aberturas redondas que conversam com a riqueza das ilustrações.</p>
+          <p style="margin:0 0 12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Cor</p>
+          <p style="margin:0; max-width:42ch; font-size:1.0625rem; line-height:1.65; color:var(--ink);">Cinza claro nos rótulos de Graça e Milagre, preto profundo na Redenção. A cor do vinho, vista pela própria garrafa transparente, completa a paleta.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(8px,1.2vw,14px); border-radius:var(--radius); overflow:hidden;">
+          <div style="aspect-ratio:3/4; background:#F4E9C2; display:flex; flex-direction:column; justify-content:space-between; padding:18px;">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(22,22,26,.5);">Graça</p>
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(22,22,26,.65);">#F4E9C2</p>
+          </div>
+          <div style="aspect-ratio:3/4; background:#F0C7B8; display:flex; flex-direction:column; justify-content:space-between; padding:18px;">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(22,22,26,.55);">Milagre</p>
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(22,22,26,.65);">#F0C7B8</p>
+          </div>
+          <div style="aspect-ratio:3/4; background:#1A0E10; display:flex; flex-direction:column; justify-content:space-between; padding:18px; color:#F0E8D6;">
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(240,232,214,.7);">Redenção</p>
+            <p style="margin:0; font-family:var(--font-mono); font-size:.6875rem; letter-spacing:.08em; color:rgba(240,232,214,.78);">#1A0E10</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CESURA TIPOGRÁFICA -->
+    <section data-reveal style="margin-top:clamp(72px,10vw,120px);">
+      <div style="position:relative; border-radius:var(--radius); background:#1A0E10; padding:clamp(64px,10vw,140px) clamp(40px,7vw,96px); overflow:hidden;">
+        <p style="margin:0 0 18px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(240,232,214,.6);">Aplicações</p>
+        <p style="margin:0; max-width:18ch; font-family:var(--font-display); font-weight:700; font-size:clamp(2.4rem,6vw,4.5rem); line-height:1; letter-spacing:-.025em; color:#F0E8D6;">Três rótulos, três passagens, uma estante.</p>
+        <p style="margin:24px 0 0; max-width:48ch; font-size:clamp(1rem,1.4vw,1.125rem); line-height:1.55; color:rgba(240,232,214,.78);">A cor do vinho conta a história antes mesmo de você ler o rótulo.</p>
+      </div>
+    </section>
+
+    <!-- 6. APLICAÇÕES -->
+    <section style="padding:clamp(40px,5vw,64px) 0 0;">
+
+      <figure data-reveal style="margin:0 0 clamp(28px,4vw,40px);">
+        <div style="position:relative; aspect-ratio:3/2; border-radius:var(--radius); overflow:hidden;">
+          <img src="uploads/branco mockup.png" alt="Graça em mockup, garrafa branca com taça e folha de palmeira sobre mármore." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+        <figcaption style="margin-top:12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Graça, vinho fino branco.</figcaption>
+      </figure>
+
+      <figure data-reveal style="margin:0 0 clamp(28px,4vw,40px);">
+        <div style="position:relative; aspect-ratio:3/2; border-radius:var(--radius); overflow:hidden;">
+          <img src="uploads/rose mockup.png" alt="Milagre em mockup, garrafa rosé deitada com taça de coquetel ao lado." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+        <figcaption style="margin-top:12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Milagre, vinho fino rosé.</figcaption>
+      </figure>
+
+      <figure data-reveal style="margin:0;">
+        <div style="position:relative; aspect-ratio:3/2; border-radius:var(--radius); overflow:hidden;">
+          <img src="uploads/tinto mockup.png" alt="Redenção em mockup, mão segurando garrafa tinta em luz baixa." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+        <figcaption style="margin-top:12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--graphite);">Redenção, vinho fino tinto.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 6. FECHO — espelha a capa, três garrafas juntas, frase de fecho -->
+    <section data-reveal style="padding:clamp(72px,10vw,120px) 0 0;">
+      <div style="display:grid; grid-template-columns:var(--cover-cols,minmax(0,7fr) minmax(0,5fr)); gap:clamp(32px,4vw,56px); align-items:center;">
+        <div style="position:relative; aspect-ratio:3/2; border-radius:var(--radius); overflow:hidden;">
+          <img src="uploads/mockup vinhos.png" alt="Linha completa Castello del Camenar: Graça, Milagre e Redenção juntos." loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <p style="margin:0; max-width:22ch; font-family:var(--font-display); font-weight:700; font-size:clamp(1.875rem,3.6vw,2.8rem); line-height:1.1; letter-spacing:-.025em; color:var(--ink); text-wrap:balance;">Três histórias antigas em três garrafas que pertencem à mesma estante.</p>
+          <p style="margin:20px 0 0; max-width:34ch; font-size:1.0625rem; line-height:1.6; color:var(--graphite);">A cor conta a passagem antes mesmo de você ler o rótulo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:clamp(72px,10vw,120px); padding:clamp(40px,6vw,64px) 0; border-top:1px solid var(--line); display:flex; align-items:baseline; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <p style="margin:0; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase; color:var(--graphite);">Próximo case</p>
+      <a href="Case Cinthia Cordeiro.dc.html" style="text-decoration:none; color:var(--ink); display:inline-flex; align-items:baseline; gap:14px;" style-hover="color:var(--accent);">
+        <span style="font-family:var(--font-display); font-weight:600; font-size:clamp(1.5rem,3.2vw,2.4rem); letter-spacing:-.02em; line-height:1.05;">Cinthia Cordeiro →</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer style="margin-top:clamp(48px,6vw,72px); background:var(--ink); color:var(--paper);">
+    <div style="max-width:1600px; margin:0 auto; padding:28px clamp(24px,5vw,80px); display:flex; align-items:center; flex-wrap:wrap; gap:20px; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase;">
+      <a href="mailto:anirem.studio@gmail.com" style="color:var(--paper); text-decoration:none;" style-hover="color:#A9C2F0;">anirem.studio@gmail.com</a>
+      <a href="#capa" style="color:var(--paper); text-decoration:none; margin-left:auto;" style-hover="color:#A9C2F0;">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic { renderVals() { return {}; } }
+</script>
+</body>
+</html>

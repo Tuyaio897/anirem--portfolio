@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="width:100%;height:100%">
+    <rect width="400" height="300" fill="#2E4A7E"/>
+    <text x="200" y="170" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="120" fill="#FCFCFA">A</text>
+    <text x="200" y="230" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" letter-spacing="6" fill="#FCFCFA">PORTFÓLIO</text>
+  </svg>
+</template>
+<title>Anirem Camenar May · Designer gráfica</title>
+<meta name="description" content="Designer gráfica em Curitiba. Marca, embalagem, web e social, do conceito à entrega, com coerência em qualquer formato." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Anirem Camenar May · Designer gráfica" />
+<meta property="og:description" content="Portfólio de marca, embalagem, web e social. Design pensado como sistema." />
+<meta property="og:image" content="https://placehold.co/1200x630/FCFCFA/16161A?text=Anirem+Camenar+May" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Anirem Camenar May · Designer gráfica" />
+<meta name="twitter:description" content="Portfólio de marca, embalagem, web e social. Design pensado como sistema." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" />
+<!-- Design system: tokens (cor, tipo, espaçamento) e bundle da marca. Fonte única de verdade dos --tokens usados abaixo. -->
+<link rel="stylesheet" href="_ds/anirem-portfolio-design-system-9e2340ff-8ed2-4b11-b7b3-16d3027691a2/styles.css" />
+<script src="_ds/anirem-portfolio-design-system-9e2340ff-8ed2-4b11-b7b3-16d3027691a2/_ds_bundle.js"></script>
+<style>
+  /* Fallback dos tokens da marca, caso o CSS do design system não carregue (mesmos valores de tokens/colors.css). */
+  :root{
+    --paper:#FCFCFA; --ink:#16161A; --graphite:#6F6F77; --line:#E6E6E1;
+    --accent:#2E4A7E; --accent-soft:#EEF1F8; --radius:8px;
+    --font-display:"Bricolage Grotesque",system-ui,sans-serif;
+    --font-body:"Inter",system-ui,-apple-system,sans-serif;
+    --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body); font-size:1.0625rem; line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+  ::selection{background:var(--accent-soft); color:var(--ink);}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+  /* Reveal no scroll, 100% CSS. Onde view() não existe, o conteúdo simplesmente aparece (nunca fica preso invisível). */
+  @keyframes aniremReveal{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:none;} }
+  @supports (animation-timeline: view()){
+    [data-reveal]{ animation:aniremReveal linear both; animation-timeline:view(); animation-range:entry 0% entry 38%; }
+  }
+  @media (prefers-reduced-motion:reduce){ [data-reveal]{ animation:none !important; opacity:1 !important; transform:none !important; } }
+  /* Responsivo: as colunas leem var(--*-cols) com fallback inline; aqui só sobrescrevemos os tokens por breakpoint. */
+  @media (max-width:920px){ :root{ --work-cols:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:760px){
+    :root{
+      --hero-cols:1fr; --hero-divider:none; --hero-divider-pad:0;
+      --work-cols:1fr; --about-cols:1fr; --hero-line:clamp(1.95rem,7.4vw,2.7rem);
+    }
+  }
+</style>
+</helmet>
+
+<div style="--accent: {{ accent }}; --radius: {{ radius }}; background:var(--paper); color:var(--ink); font-family:var(--font-body);">
+
+  <a href="#work" style="position:absolute; left:-9999px; top:8px; z-index:200; background:var(--ink); color:var(--paper); padding:10px 16px; border-radius:6px; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none;" style-focus="left:16px;">Pular para o conteúdo</a>
+
+  <header id="anirem-nav" style="position:sticky; top:0; z-index:100; border:0; background:linear-gradient(to bottom, rgba(252,252,250,.92) 0%, rgba(252,252,250,.78) 45%, rgba(252,252,250,.30) 80%, rgba(252,252,250,0) 100%); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); -webkit-mask-image:linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%); mask-image:linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);">
+    <!-- Camada de ruído (sem vidro): blur do backdrop + grão sutil, sem painel sólido nem linha. -->
+    <div aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.05; background-image:url('data:image/svg+xml,;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAiIGhlaWdodD0iMTYwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44NSIgbnVtT2N0YXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg=='); background-size:160px 160px;"></div>
+    <nav style="position:relative; max-width:1600px; margin:0 auto; padding:18px clamp(24px,5vw,80px) 26px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="#top" style="font-family:var(--font-display); font-weight:700; font-size:1.0625rem; letter-spacing:-.01em; color:var(--ink); text-decoration:none;">Anirem Camenar May</a>
+      <div style="display:flex; align-items:center; gap:clamp(20px,3vw,40px); font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase;">
+        <a href="#work" style="color:var(--ink); text-decoration:none; padding-bottom:4px; background-image:linear-gradient(var(--accent),var(--accent)); background-repeat:no-repeat; background-position:0 100%; background-size:0% 1.5px; transition:background-size .3s var(--ease), color .3s var(--ease);" style-hover="background-size:100% 1.5px; color:var(--accent);">Trabalhos</a>
+        <a href="{{ curriculoHref }}" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:none; padding-bottom:4px; background-image:linear-gradient(var(--accent),var(--accent)); background-repeat:no-repeat; background-position:0 100%; background-size:0% 1.5px; transition:background-size .3s var(--ease), color .3s var(--ease);" style-hover="background-size:100% 1.5px; color:var(--accent);">Currículo</a>
+        <a href="#contact" style="color:var(--ink); text-decoration:none; padding-bottom:4px; background-image:linear-gradient(var(--accent),var(--accent)); background-repeat:no-repeat; background-position:0 100%; background-size:0% 1.5px; transition:background-size .3s var(--ease), color .3s var(--ease);" style-hover="background-size:100% 1.5px; color:var(--accent);">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="top" style="max-width:1600px; margin:0 auto; padding:0 clamp(24px,5vw,80px);">
+
+    <!-- Hero: duas colunas. Esquerda, manchete + linha de stats. Direita, retrato + bio curta + links, com um fio vertical separando. -->
+    <section style="padding:clamp(64px,11vw,128px) 0 0;">
+      <!-- Filtro de blur vertical (detalhe "etéreo" da referência) -->
+      <svg width="0" height="0" style="position:absolute;" aria-hidden="true"><filter id="verticalBlur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2 13"></feGaussianBlur></filter></svg>
+
+      <div style="display:grid; grid-template-columns:var(--hero-cols,repeat(3,minmax(0,1fr))); gap:clamp(24px,3vw,40px); align-items:start;">
+
+        <!-- Coluna esquerda: manchete + frase + stats. Ocupa 2 das 3 colunas, alinhando o fio com a grade de Work. -->
+        <div style="grid-column:span 2;">
+          <!-- Manchete (cópia borrada atrás + nítida na frente) -->
+          <div style="position:relative; display:inline-block;">
+            <div aria-hidden="true" style="position:absolute; inset:0; color:var(--ink); opacity:.18; filter:url(#verticalBlur); transform:scaleY(1.06); pointer-events:none; font-family:var(--font-display); font-weight:700; font-size:var(--hero-line,clamp(2.45rem,4.9vw,3.75rem)); line-height:1.1; letter-spacing:-.03em;">Oi, eu sou a Anirem</div>
+            <h1 style="position:relative; margin:0; font-family:var(--font-display); font-weight:700; font-size:var(--hero-line,clamp(2.45rem,4.9vw,3.75rem)); line-height:1.1; letter-spacing:-.03em; color:var(--ink);">Oi, eu sou a Anirem</h1>
+          </div>
+
+          <!-- Frase que troca (quebra sozinha em até 2 linhas, nunca corta) -->
+          <div style="position:relative; font-size:var(--hero-line,clamp(2.45rem,4.9vw,3.75rem)); height:2.3em; overflow:hidden; margin-top:4px;">
+            <div id="rotatingText" style="height:100%; font-family:var(--font-display); font-weight:600; font-size:1em; line-height:1.1; letter-spacing:-.02em; color:#AEAEB4; text-wrap:balance; will-change:transform,opacity;"><div>Mas pode me chamar de Nina</div></div>
+          </div>
+
+          <!-- Linha de stats (alinhamento da referência) -->
+          <div style="display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,56px); margin-top:clamp(36px,5vw,52px);">
+            <div>
+              <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; color:var(--graphite);">Atualmente</p>
+              <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:1.0625rem; color:var(--ink);">Curitiba, disponível remoto</p>
+            </div>
+            <div>
+              <p style="margin:0 0 6px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; color:var(--graphite);">Formação</p>
+              <p style="margin:0; font-family:var(--font-display); font-weight:600; font-size:1.0625rem; color:var(--ink);">Design Gráfico, UTFPR</p>
+            </div>
+          </div>
+
+          <a href="#work" style="display:inline-block; margin-top:clamp(32px,4vw,44px); font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase; color:var(--graphite); text-decoration:none;" style-hover="color:var(--accent);">↓ Trabalhos</a>
+        </div>
+
+        <!-- Coluna direita: fio vertical + retrato + bio + links -->
+        <div style="border-left:var(--hero-divider,1px solid var(--line)); padding-left:var(--hero-divider-pad,clamp(28px,4vw,48px));">
+          <div style="width:84px; height:84px; border-radius:999px; overflow:hidden; border:1px solid var(--line);"><img src="uploads/freepik__the-style-is-candid-image-photography-with-natural__97071.png" alt="Retrato de Anirem Camenar May" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>
+          <p style="margin:22px 0 12px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; color:var(--graphite);">Prazer</p>
+          <p style="margin:0; max-width:34ch; font-size:1.0625rem; line-height:1.55; color:var(--ink);">Penso cada projeto como um sistema, de marca a embalagem, de site a post. Do conceito à entrega, com coerência em qualquer formato.</p>
+          <!-- Botão sutil de currículo: Inter, contorno fino, na estética do site -->
+          <a href="{{ curriculoHref }}" target="_blank" rel="noopener" style="margin-top:22px; display:inline-flex; align-items:center; gap:9px; padding:9px 17px; border:1px solid var(--line); border-radius:8px; font-family:var(--font-body); font-size:.9375rem; color:var(--ink); text-decoration:none; transition:border-color .3s var(--ease), color .3s var(--ease), background .3s var(--ease);" style-hover="border-color:var(--accent); color:var(--accent); background:var(--accent-soft);">Ver currículo<span aria-hidden="true" style="font-family:var(--font-mono); font-size:.75rem; letter-spacing:.08em;">PDF ↗</span></a>
+          <div style="margin-top:24px; display:flex; align-items:center; gap:18px;">
+            <a href="https://www.linkedin.com/in/anirem-may-59206a415/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex; color:var(--graphite); transition:color .3s var(--ease);" style-hover="color:var(--accent);"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://www.behance.net/aniremcamenar" target="_blank" rel="noopener" aria-label="Behance" style="display:inline-flex; color:var(--graphite); transition:color .3s var(--ease);" style-hover="color:var(--accent);"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg></a>
+            <a href="https://www.instagram.com/anirem_c/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex; color:var(--graphite); transition:color .3s var(--ease);" style-hover="color:var(--accent);"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+            <a href="https://wa.me/5541999202883" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:inline-flex; color:var(--graphite); transition:color .3s var(--ease);" style-hover="color:var(--accent);"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01a1.1 1.1 0 0 0-.792.372c-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Work: grade de 3 colunas de cards (diagramação da referência). O card inteiro é o link. -->
+    <section id="work" style="scroll-margin-top:90px; padding:clamp(72px,11vw,128px) 0 0;">
+
+      <div style="display:grid; grid-template-columns:var(--work-cols,repeat(3,minmax(0,1fr))); gap:clamp(28px,3.5vw,44px) clamp(24px,3vw,40px);">
+
+        <article data-reveal>
+          <a href="Case Unica Viagens.dc.html" aria-label="Ver case: Única Viagens e Turismo" style="display:block; text-decoration:none; color:inherit;">
+            <div style="position:relative; aspect-ratio:4/3; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--paper);">
+              <img src="uploads/unica/13_capa.png" alt="" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform 600ms var(--ease);" style-hover="transform:scale(1.04);" />
+              <!-- Tag assinatura: faixa de blur progressivo (igual a nav) -->
+              <div style="position:absolute; left:0; right:0; bottom:0; height:58px; display:flex; align-items:flex-end; padding:0 16px 13px; overflow:hidden; background:linear-gradient(to top, rgba(252,252,250,.84) 0%, rgba(252,252,250,.5) 48%, rgba(252,252,250,0) 100%); backdrop-filter:blur(7px) saturate(140%); -webkit-backdrop-filter:blur(7px) saturate(140%); -webkit-mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%); mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%);">
+                <span aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.06; background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44NSIgbnVtT2N0YXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg=='); background-size:140px 140px;"></span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:.6875rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--ink);">MARCA · REBRANDING</span>
+              </div>
+            </div>
+            <h3 style="margin:18px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,1.8vw,1.5rem); letter-spacing:-.015em; line-height:1.14; color:var(--ink);" style-hover="color:var(--accent);">Única Viagens e Turismo</h3>
+          </a>
+          <p style="margin:8px 0 0; color:var(--graphite); line-height:1.5;">16 anos de história destilados em um monograma. Rebranding completo da Única Viagens.</p>
+        </article>
+
+        <article data-reveal>
+          <a href="Case Alianca Metalurgica.dc.html" aria-label="Ver case: Aliança Metalúrgica" style="display:block; text-decoration:none; color:inherit;">
+            <div style="position:relative; aspect-ratio:4/3; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--paper);">
+              <img src="uploads/m.i.v_alianaa_v01_202629-s29abvR3FOkk72I3.png" alt="" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform 600ms var(--ease);" style-hover="transform:scale(1.04);" />
+              <!-- Tag assinatura: faixa de blur progressivo (igual a nav) -->
+              <div style="position:absolute; left:0; right:0; bottom:0; height:58px; display:flex; align-items:flex-end; padding:0 16px 13px; overflow:hidden; background:linear-gradient(to top, rgba(252,252,250,.84) 0%, rgba(252,252,250,.5) 48%, rgba(252,252,250,0) 100%); backdrop-filter:blur(7px) saturate(140%); -webkit-backdrop-filter:blur(7px) saturate(140%); -webkit-mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%); mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%);">
+                <span aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.06; background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44NSIgbnVtT2N0YXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg=='); background-size:140px 140px;"></span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:.6875rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--ink);">MARCA</span>
+              </div>
+            </div>
+            <h3 style="margin:18px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,1.8vw,1.5rem); letter-spacing:-.015em; line-height:1.14; color:var(--ink);" style-hover="color:var(--accent);">Aliança Metalúrgica</h3>
+          </a>
+          <p style="margin:8px 0 0; color:var(--graphite); line-height:1.5;">Rebranding de uma indústria de quase 100 anos. Tradição que precisava parecer firme e atual ao mesmo tempo.</p>
+        </article>
+
+        <article data-reveal>
+          <a href="Case Cinthia Cordeiro.dc.html" aria-label="Ver case: Cinthia Cordeiro" style="display:block; text-decoration:none; color:inherit;">
+            <div style="position:relative; aspect-ratio:4/3; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--paper);">
+              <img src="uploads/Ativo 12.png" alt="" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform 600ms var(--ease);" style-hover="transform:scale(1.04);" />
+              <!-- Tag assinatura: faixa de blur progressivo (igual a nav) -->
+              <div style="position:absolute; left:0; right:0; bottom:0; height:58px; display:flex; align-items:flex-end; padding:0 16px 13px; overflow:hidden; background:linear-gradient(to top, rgba(252,252,250,.84) 0%, rgba(252,252,250,.5) 48%, rgba(252,252,250,0) 100%); backdrop-filter:blur(7px) saturate(140%); -webkit-backdrop-filter:blur(7px) saturate(140%); -webkit-mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%); mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%);">
+                <span aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.06; background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44NSIgbnVtT2N0YXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg=='); background-size:140px 140px;"></span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:.6875rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--ink);">MARCA</span>
+              </div>
+            </div>
+            <h3 style="margin:18px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,1.8vw,1.5rem); letter-spacing:-.015em; line-height:1.14; color:var(--ink);" style-hover="color:var(--accent);">Cinthia Cordeiro</h3>
+          </a>
+          <p style="margin:8px 0 0; color:var(--graphite); line-height:1.5;">Marca pessoal para uma líder com 25 anos de hospitalidade. Um monograma que assina autoridade com calor.</p>
+        </article>
+
+        <article data-reveal>
+          <a href="Case Jolie.dc.html" aria-label="Ver case: Jolie" style="display:block; text-decoration:none; color:inherit;">
+            <div style="position:relative; aspect-ratio:4/3; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--paper);">
+              <img src="uploads/33d568178279793.64e546a1d1a44.webp" alt="" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform 600ms var(--ease);" style-hover="transform:scale(1.04);" />
+              <!-- Tag assinatura: faixa de blur progressivo (igual a nav) -->
+              <div style="position:absolute; left:0; right:0; bottom:0; height:58px; display:flex; align-items:flex-end; padding:0 16px 13px; overflow:hidden; background:linear-gradient(to top, rgba(252,252,250,.84) 0%, rgba(252,252,250,.5) 48%, rgba(252,252,250,0) 100%); backdrop-filter:blur(7px) saturate(140%); -webkit-backdrop-filter:blur(7px) saturate(140%); -webkit-mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%); mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%);">
+                <span aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.06; background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44NSIgbnVtT2N0YXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg=='); background-size:140px 140px;"></span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:.6875rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--ink);">MARCA</span>
+              </div>
+            </div>
+            <h3 style="margin:18px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,1.8vw,1.5rem); letter-spacing:-.015em; line-height:1.14; color:var(--ink);" style-hover="color:var(--accent);">Jolie</h3>
+          </a>
+          <p style="margin:8px 0 0; color:var(--graphite); line-height:1.5;">Estudo de marca para uma joalheria de luxo francesa, onde a contenção é o que comunica sofisticação.</p>
+        </article>
+
+        <article data-reveal>
+          <a href="Case Estancia Solazer.dc.html" aria-label="Ver case: Estância Solazer" style="display:block; text-decoration:none; color:inherit;">
+            <div style="position:relative; aspect-ratio:4/3; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--paper);">
+              <img src="uploads/Papelaria.png" alt="" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform 600ms var(--ease);" style-hover="transform:scale(1.04);" />
+              <!-- Tag assinatura: faixa de blur progressivo (igual a nav) -->
+              <div style="position:absolute; left:0; right:0; bottom:0; height:58px; display:flex; align-items:flex-end; padding:0 16px 13px; overflow:hidden; background:linear-gradient(to top, rgba(252,252,250,.84) 0%, rgba(252,252,250,.5) 48%, rgba(252,252,250,0) 100%); backdrop-filter:blur(7px) saturate(140%); -webkit-backdrop-filter:blur(7px) saturate(140%); -webkit-mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%); mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%);">
+                <span aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.06; background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44NSIgbnVtT2N0YXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg=='); background-size:140px 140px;"></span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:.6875rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--ink);">MARCA</span>
+              </div>
+            </div>
+            <h3 style="margin:18px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,1.8vw,1.5rem); letter-spacing:-.015em; line-height:1.14; color:var(--ink);" style-hover="color:var(--accent);">Estância Solazer</h3>
+          </a>
+          <p style="margin:8px 0 0; color:var(--graphite); line-height:1.5;">Identidade para uma estância de lazer da família. Energia, cor e um pattern que não para quieto.</p>
+        </article>
+
+        <article data-reveal>
+          <a href="Case Castillo del Camenar.dc.html" aria-label="Ver case: Castello del Camenar" style="display:block; text-decoration:none; color:inherit;">
+            <div style="position:relative; aspect-ratio:4/3; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--paper);">
+              <img src="uploads/mockup vinhos.png" alt="" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; transition:transform 600ms var(--ease);" style-hover="transform:scale(1.04);" />
+              <!-- Tag assinatura: faixa de blur progressivo (igual a nav) -->
+              <div style="position:absolute; left:0; right:0; bottom:0; height:58px; display:flex; align-items:flex-end; padding:0 16px 13px; overflow:hidden; background:linear-gradient(to top, rgba(252,252,250,.84) 0%, rgba(252,252,250,.5) 48%, rgba(252,252,250,0) 100%); backdrop-filter:blur(7px) saturate(140%); -webkit-backdrop-filter:blur(7px) saturate(140%); -webkit-mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%); mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%);">
+                <span aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.06; background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44NSIgbnVtT2N0YXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg=='); background-size:140px 140px;"></span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:.6875rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--ink);">EMBALAGEM</span>
+              </div>
+            </div>
+            <h3 style="margin:18px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,1.8vw,1.5rem); letter-spacing:-.015em; line-height:1.14; color:var(--ink);" style-hover="color:var(--accent);">Castello del Camenar</h3>
+          </a>
+          <p style="margin:8px 0 0; color:var(--graphite); line-height:1.5;">Graça, Milagre e Redenção. Uma linha de rótulos que traduz passagens bíblicas em ilustração.</p>
+        </article>
+
+        <!-- Galeria: vitrine de criativos avulsos. Mosaico 2x2 de thumbnails reais, link pra Galeria.dc.html -->
+        <article data-reveal>
+          <a href="Galeria.dc.html" aria-label="Ver galeria de criativos avulsos" style="display:block; text-decoration:none; color:inherit;">
+            <div style="position:relative; aspect-ratio:4/3; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; padding:8px; background:var(--paper); display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+              <div style="border-radius:calc(var(--radius) - 4px); overflow:hidden;"><img src="uploads/cards/ifood.png" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>
+              <div style="border-radius:calc(var(--radius) - 4px); overflow:hidden;"><img src="uploads/cards/panetones.png" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>
+              <div style="border-radius:calc(var(--radius) - 4px); overflow:hidden;"><img src="uploads/cards/laura.png" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>
+              <div style="border-radius:calc(var(--radius) - 4px); overflow:hidden;"><img src="uploads/cards/pistache.png" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>
+              <!-- Tag assinatura: faixa de blur progressivo (igual a nav) -->
+              <div style="position:absolute; left:0; right:0; bottom:0; height:58px; display:flex; align-items:flex-end; padding:0 16px 13px; overflow:hidden; background:linear-gradient(to top, rgba(252,252,250,.84) 0%, rgba(252,252,250,.5) 48%, rgba(252,252,250,0) 100%); backdrop-filter:blur(7px) saturate(140%); -webkit-backdrop-filter:blur(7px) saturate(140%); -webkit-mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%); mask-image:linear-gradient(to top, #000 0%, #000 48%, transparent 100%);">
+                <span aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; opacity:.06; background-image:url('data:image/svg+xml,;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44NSIgbnVtT2N0YXZlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg=='); background-size:140px 140px;"></span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:.6875rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--ink);">Galeria</span>
+              </div>
+            </div>
+            <h3 style="margin:18px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,1.8vw,1.5rem); letter-spacing:-.015em; line-height:1.14; color:var(--ink);" style-hover="color:var(--accent);">Criativos avulsos</h3>
+          </a>
+          <p style="margin:8px 0 0; color:var(--graphite); line-height:1.5;">58 peças avulsas: cards, anúncios e cartazes do dia a dia.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="scroll-margin-top:90px; padding:clamp(80px,12vw,140px) 0 clamp(72px,10vw,120px);">
+      <div data-reveal>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:18px 24px;">
+          <div style="display:flex; align-items:center; gap:18px;">
+            <a href="https://www.linkedin.com/in/anirem-may-59206a415/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex; color:var(--graphite); transition:color .3s var(--ease);" style-hover="color:var(--accent);"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="https://www.behance.net/aniremcamenar" target="_blank" rel="noopener" aria-label="Behance" style="display:inline-flex; color:var(--graphite); transition:color .3s var(--ease);" style-hover="color:var(--accent);"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg></a>
+            <a href="https://www.instagram.com/anirem_c/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex; color:var(--graphite); transition:color .3s var(--ease);" style-hover="color:var(--accent);"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+            <a href="https://wa.me/5541999202883" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:inline-flex; color:var(--graphite); transition:color .3s var(--ease);" style-hover="color:var(--accent);"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01a1.1 1.1 0 0 0-.792.372c-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+          </div>
+        </div>
+        <p style="margin:22px 0 0; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase; color:var(--graphite);">Curitiba, Brasil&nbsp; ·&nbsp; disponível remoto e presencial</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer: barra escura (diagramação da referência). E-mail + links à esquerda, voltar ao topo à direita. -->
+  <footer style="background:var(--ink); color:var(--paper);">
+    <div style="max-width:1600px; margin:0 auto; padding:28px clamp(24px,5vw,80px); display:flex; align-items:center; flex-wrap:wrap; gap:20px; font-family:var(--font-mono); font-size:.8125rem; letter-spacing:.08em; text-transform:uppercase;">
+      <a href="mailto:anirem.studio@gmail.com" style="color:var(--paper); text-decoration:none;" style-hover="color:#A9C2F0;">anirem.studio@gmail.com</a>
+      <div style="margin-left:auto; display:flex; align-items:center; gap:24px;">
+        <div style="display:flex; align-items:center; gap:16px;">
+          <a href="https://www.linkedin.com/in/anirem-may-59206a415/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex; color:var(--paper); transition:color .3s var(--ease);" style-hover="color:#A9C2F0;"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.behance.net/aniremcamenar" target="_blank" rel="noopener" aria-label="Behance" style="display:inline-flex; color:var(--paper); transition:color .3s var(--ease);" style-hover="color:#A9C2F0;"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg></a>
+          <a href="https://www.instagram.com/anirem_c/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex; color:var(--paper); transition:color .3s var(--ease);" style-hover="color:#A9C2F0;"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="https://wa.me/5541999202883" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:inline-flex; color:var(--paper); transition:color .3s var(--ease);" style-hover="color:#A9C2F0;"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01a1.1 1.1 0 0 0-.792.372c-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+        </div>
+        <a href="#top" style="color:var(--paper); text-decoration:none;" style-hover="color:#A9C2F0;">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:860},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2E4A7E&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#2E4A7E&quot;,&quot;#6E2B3E&quot;]},&quot;cornerStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;rounded&quot;,&quot;options&quot;:[&quot;rounded&quot;,&quot;architectural&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;curriculoHref&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://drive.google.com/file/d/1hOj7d9JKk0nfTQfuRsIBRVlpbG1_0Y55/view?usp=sharing&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? "#2E4A7E";
+    const cornerStyle = this.props.cornerStyle ?? "rounded";
+    const radius = cornerStyle === "architectural" ? "0px" : "8px";
+
+    // Link do currículo (PDF). Substituir quando o link real for enviado.
+    const curriculoHref = this.props.curriculoHref ?? "#";
+
+    // Catálogo dos cases (a partir do CASES.md). Ordem deliberada: abertura forte com a Única,
+    // depois Castillo (embalagem) pra mostrar range cedo, Cinthia (sóbrio), Jolie (luxo),
+    // Solazer (colorido), Aliança (institucional). Social entra como vitrine, sem case.
+    // Ordem da grade: linha 1 = Única · Aliança Metalúrgica · Cinthia Cordeiro
+    //                  linha 2 = Jolie · Estância Solazer · Castello del Camenar
+    const projects = [
+      { id: "unica",    title: "Única Viagens e Turismo",  disc: "Marca · Rebranding", year: "2026", desc: "16 anos de história destilados em um monograma. Rebranding completo da Única Viagens.", href: "Case Unica Viagens.dc.html", cover: "uploads/unica/13_capa.png", coverPos: "center" },
+      { id: "alianca",  title: "Aliança Metalúrgica",      disc: "Marca",     year: "2025", desc: "Rebranding de uma indústria de quase 100 anos. Tradição que precisava parecer firme e atual ao mesmo tempo.", href: "Case Alianca Metalurgica.dc.html", cover: "uploads/m.i.v_alianaa_v01_202629-s29abvR3FOkk72I3.png", coverPos: "center" },
+      { id: "cinthia",  title: "Cinthia Cordeiro",         disc: "Marca",     year: "2026", desc: "Marca pessoal para uma líder com 25 anos de hospitalidade. Um monograma que assina autoridade com calor.", href: "Case Cinthia Cordeiro.dc.html", cover: "uploads/Ativo 12.png", coverPos: "center" },
+      { id: "jolie",    title: "Jolie",                    disc: "Marca",     year: "2023", desc: "Estudo de marca para uma joalheria de luxo francesa, onde a contenção é o que comunica sofisticação.", href: "Case Jolie.dc.html", cover: "uploads/33d568178279793.64e546a1d1a44.webp", coverPos: "center" },
+      { id: "solazer",  title: "Estância Solazer",         disc: "Marca",     year: "2024", desc: "Identidade para uma estância de lazer da família. Energia, cor e um pattern que não para quieto.", href: "Case Estancia Solazer.dc.html", cover: "uploads/Papelaria.png", coverPos: "center" },
+      { id: "castillo", title: "Castello del Camenar",     disc: "Embalagem", year: "2026", desc: "Graça, Milagre e Redenção. Uma linha de rótulos que traduz passagens bíblicas em ilustração.", href: "Case Castillo del Camenar.dc.html", cover: "uploads/mockup vinhos.png", coverPos: "center" },
+    ].map((p) => ({ ...p, ariaLabel: "Ver case: " + p.title, disc: p.disc.toUpperCase() }));
+
+    return { accent, radius, projects, curriculoHref };
+  }
+
+  componentDidMount() {
+    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // O reveal no scroll é 100% CSS (animation-timeline: view()), sem JS — nunca deixa conteúdo preso invisível.
+
+    // Linha secundária que troca (1 ou 2 linhas para nenhuma palavra cortar), via Web Animations API.
+    const rot = document.getElementById("rotatingText");
+    if (rot && !reduce) {
+      const phrases = [
+        ["Mas pode me chamar de Nina"],
+        ["Designer gráfica"],
+        ["Descobri o design aos 9 anos", "através dos blogs"],
+        ["Valorizo honestidade", "e capricho"],
+        ["Amo cozinhar e jogar"],
+        ["Adoro gatos"],
+        ["Tomo Pepsi no lugar de café"],
+      ];
+      // Junta com espaço e deixa quebrar sozinho (text-wrap:balance) — nunca corta palavra.
+      const render = (lines) => { rot.innerHTML = "<div>" + lines.join(" ") + "</div>"; };
+      render(phrases[0]);
+      let idx = 0;
+      const swap = () => {
+        rot.animate(
+          [{ opacity: 1, transform: "translateY(0)" }, { opacity: 0, transform: "translateY(-100%)" }],
+          { duration: 500, easing: "cubic-bezier(.4,0,.2,1)", fill: "forwards" }
+        );
+        setTimeout(() => {
+          idx = (idx + 1) % phrases.length;
+          render(phrases[idx]);
+          rot.animate(
+            [{ opacity: 0, transform: "translateY(100%)" }, { opacity: 1, transform: "translateY(0)" }],
+            { duration: 500, easing: "cubic-bezier(.4,0,.2,1)", fill: "forwards" }
+          );
+        }, 500);
+      };
+      this._rotTimer = setInterval(swap, 3600);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._rotTimer) clearInterval(this._rotTimer);
+  }
+}
+</script>
+</body>
+</html>

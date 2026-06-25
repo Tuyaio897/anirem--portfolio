@@ -1,0 +1,31 @@
+/* Colors — quase monocromático e quente.
+   O azul-blueprint só aparece em interação (link / hover / foco). Nunca decorativo. */
+
+:root {
+  /* Base palette */
+  --paper: #FCFCFA;        /* fundo geral, branco-papel levemente quente (não é creme) */
+  --ink: #16161A;          /* texto principal e títulos, quase preto */
+  --graphite: #6F6F77;     /* metadados, legendas, texto secundário */
+  --line: #E6E6E1;         /* divisórias finas, usar com parcimônia */
+  --accent: #2E4A7E;       /* azul-blueprint, só link / hover / foco */
+  --accent-soft: #EEF1F8;  /* fundo de hover sutil */
+
+  /* Alternativa de acento mais quente — troque só --accent por este para virar o sistema */
+  --accent-wine: #6E2B3E;
+
+  /* Semantic aliases — prefira estes no código de produto */
+  --bg: var(--paper);
+  --surface-card: var(--paper);
+  --text-strong: var(--ink);
+  --text-body: var(--ink);
+  --text-muted: var(--graphite);
+  --text-meta: var(--graphite);
+  --border-hairline: var(--line);
+  --link: var(--accent);
+  --link-hover: var(--accent);
+  --focus-ring: var(--accent);
+  --hover-surface: var(--accent-soft);
+
+  /* Image treatment — tom das imagens: neutro/quente, sem saturação extra */
+  --img-overlay: rgba(22, 22, 26, 0.04);
+}

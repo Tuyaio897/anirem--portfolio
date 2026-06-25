@@ -1,0 +1,30 @@
+/* Spacing & layout — o respiro é o que dá o ar do site. Ser generoso.
+   Escala base 4px. */
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Layout */
+  --content-max: 1120px;                    /* largura máxima, centralizada @kind spacing */
+  --gutter: clamp(24px, 5vw, 64px); /* @kind spacing */
+  --section-y: clamp(80px, 12vw, 140px); /* @kind spacing */
+
+  /* Radii — miniaturas em 8px. Pode ir a 0 para um ar mais arquitetônico. */
+  --radius: 8px;
+  --radius-architectural: 0px;
+
+  /* Motion — sutil, sempre respeitar prefers-reduced-motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --dur-fast: 160ms; /* @kind other */
+  --dur: 320ms;      /* @kind other */
+  --dur-slow: 600ms; /* @kind other */
+}
